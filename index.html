@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר מוטיבציה</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        #message {
+            margin: 20px 0;
+            font-size: 1.5rem;
+            color: #222;
+            text-align: center;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff758c;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ff4a6e;
+        }
+    </style>
+</head>
+<body>
+    <h1>אתר מוטיבציה</h1>
+    <div id="message">לחץ על הכפתור לקבלת משפט מוטיבציה!</div>
+    <button onclick="showMotivation()">קבל מוטיבציה</button>
+
+    <script>
+        const messages = [
+            "אתה יכול להשיג כל מה שתרצה!",
+            "אל תתייאש, כל צעד קטן מקרב אותך למטרה.",
+            "הצלחה מתחילה במאמץ קטן כל יום.",
+            "תאמין בעצמך, אתה חזק יותר ממה שאתה חושב.",
+            "כל כישלון הוא הזדמנות ללמוד ולהתקדם."
+        ];
+
+        function showMotivation() {
+            const index = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[index];
+        }
+    </script>
+</body>
+</html>
